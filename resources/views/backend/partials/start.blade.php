@@ -65,6 +65,7 @@
     <link rel="stylesheet" href="{{ asset('assets') }}/textfield/textfield.scss" />
     <link rel="stylesheet" href="{{ asset('assets') }}/toggles/toggles.scss" />
     <link rel="stylesheet" href="{{ asset('assets') }}/tooltip/tooltip.scss" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- endinject -->
 
 </head>

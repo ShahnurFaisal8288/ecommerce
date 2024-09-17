@@ -62,7 +62,7 @@
                             </a>
                             <div class="mdl-navigation">
                                 <a class="mdl-navigation__link" href="{{ route('category.index') }}">Category</a>
-                                <a class="mdl-navigation__link" href="{{asset('button')}}/ui-cards.html">Subcategory</a>
+                                <a class="mdl-navigation__link" href="{{ route('subCategory.index') }}">Subcategory</a>
                                 <a class="mdl-navigation__link" href="{{asset('button')}}/ui-colors.html">Colors</a>
                                 <a class="mdl-navigation__link" href="{{asset('button')}}/ui-form-components.html">Forms</a>
                                 <a class="mdl-navigation__link" href="{{asset('button')}}/ui-icons.html">Icons</a>

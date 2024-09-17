@@ -3,17 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\SubCategory;
 use Illuminate\Http\Request;
 
-class CategoryController extends Controller
+class SubCategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $category = Category::all();
-        return view('backend.product.category.addCategory',compact('category'));
+        $categories = Category::all();
+        $subCategory = SubCategory::all();
+        return view('backend.product.subCategory.subCategory',compact('subCategory','categories'));
     }
 
     /**
@@ -29,11 +31,12 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $category = new Category();
-        $category->name = $request->name;
-        $category->description = $request->description;
-        $category->status = $request->has('status') ? 'active' : 'inactive';
-        $category->save();
+        $subCategory = new SubCategory();
+        $subCategory->category_id = $request->category_id;
+        $subCategory->name = $request->name;
+        $subCategory->description = $request->description;
+        $subCategory->status = $request->has('status') ? 'active' : 'inactive';
+        $subCategory->save();
         return back();
     }
 
@@ -58,11 +61,12 @@ class CategoryController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $categories = Category::find($id);
-        $categories->name = $request->name;
-        $categories->description = $request->description;
-        $categories->status = $request->has('status') ? 'active' : 'inactive';
-        $categories->save();
+        $subCategories = SubCategory::find($id);
+        $subCategories->category_id = $request->category_id;
+        $subCategories->name = $request->name;
+        $subCategories->description = $request->description;
+        $subCategories->status = $request->has('status') ? 'active' : 'inactive';
+        $subCategories->save();
         return back();
     }
 
@@ -71,7 +75,7 @@ class CategoryController extends Controller
      */
     public function destroy(string $id)
     {
-        Category::findOrFail($id)->delete();
+        SubCategory::findOrFail($id)->delete();
         return back();
     }
 }
