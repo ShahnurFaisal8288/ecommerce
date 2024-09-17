@@ -1,0 +1,16 @@
+.dataTables_wrapper .dataTables_length {
+    float: left;
+}
+.dataTables_wrapper .dataTables_filter {
+    float: right;
+    margin-bottom: 8px;
+}
+.dataTables_wrapper .dataTables_info {
+    float: left;
+}
+.dataTables_wrapper .dataTables_paginate {
+    float: right;
+}
+.modal_width{
+    max-width: 50%;
+}
